@@ -3,9 +3,12 @@ import os
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from utils import square, is_even, celsius_to_fahrenheit
+from utils import square, is_even, celsius_to_fahrenheit, greet
 
 def main():
+    name = input("Enter your name: ")
+    print(greet(name))
+    
     try:
         user_input = float(input("Enter a number: "))
         num = int(user_input) if user_input.is_integer() else user_input
